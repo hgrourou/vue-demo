@@ -12,9 +12,6 @@
         <input type="text" id="input" v-model="text">
         {{ text }}
     </div>
-
-
-
 <script>
     // Vue构造函数
     function Vue(options){
@@ -147,9 +144,11 @@
     //上边实例化新的观察者的时候执行这个函数：通过get()取得Vue.data中对应的数据，然后通过update()方法把数据更新到节点中。
     function Watcher(vm,node,name){
         //让全局变量Dep的target属性的指针指向该watcher实例
+        // 此时的this是watch
         Dep.target = this;
         this.vm = vm;
         this.node = node;
+        // name是变量名， node是节点
         this.name = name;
         //放入Dep.target才能update()
         this.update();
@@ -166,8 +165,6 @@
             this.value = this.vm[this.name]; //触发相应属性的get
         }
     }
-
-
 
     var vm = new Vue({
         el: "app",
