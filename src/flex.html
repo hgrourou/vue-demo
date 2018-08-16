@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .container div {
+      /* width: 100px; */
+    }
+    .container {
+      display: flex;
+      height: auto;
+      /* flex-direction: column */
+      /* flex-wrap: wrap-reverse; */
+      justify-content: center;
+      /* align-items: baseline; */
+    }
+    .class1 {
+      height: 100px;
+      flex-grow: 1;
+      flex: 1;
+      width: 200px;
+    }
+    .class2 {
+      height: 120px;
+      flex: 1;
+      width: 300px;
+    }
+    .class3 {
+      height: 130px;
+      flex: 1;
+    }
+    .class4 {
+      height: 120px;
+      flex: 1;
+    }
+    .class5 {
+      height: 110px;
+      flex-grow: 3;
+      align-self: center;
+      flex: 1;
+    }
+    .class6 {
+      height: 100px;
+      flex: 1;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="class1" style="background-color: orange">1</div>
+    <div class="class2" style="background-color: yellow">2</div>
+    <div class="class3" style="background-color: black">3</div>
+    <div class="class4" style="background-color: orangered">4</div>
+    <div class="class5" style="background-color: green">5</div>
+    <div class="class6" style="background-color: blue">6</div>
+  </div>
+</body>
+</html>
